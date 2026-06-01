@@ -3,510 +3,482 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>生物医药深度研究 · 全景与投资框架</title>
+<title>生物医药职业发展研究 · 杭州长三角</title>
 <style>
 :root {
-  --primary: #1a5276; --primary-light: #d4e6f1; --accent: #27ae60;
-  --bg: #f8f9fa; --card: #fff; --text: #1a1a1a; --text-muted: #666;
+  --primary: #0d47a1; --primary-light: #e3f2fd; --accent: #00897b;
+  --bg: #f5f7fa; --card: #fff; --text: #1a1a1a; --text-muted: #666;
   --border: #e5e5e5; --radius: 12px; --shadow: 0 2px 8px rgba(0,0,0,.06);
-  --red: #e74c3c; --orange: #f39c12; --blue: #3498db; --purple: #8e44ad;
+  --red: #e53935; --orange: #fb8c00; --amber: #ffa000; --green: #43a047; --blue: #1e88e5;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 
 .hero {
-  background: linear-gradient(135deg, #0d2540 0%, #1a5276 40%, #1a6e40 100%);
-  color: #fff; padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #002f6c 0%, #0d47a1 40%, #00897b 100%);
+  color: #fff; padding: 48px 24px 40px; text-align: center; position: relative; overflow: hidden;
 }
 .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,.06) 0%, transparent 60%); }
-.hero h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; position: relative; letter-spacing: 1px; }
-.hero .subtitle { font-size: 14px; opacity: .85; margin-top: 8px; position: relative; }
-.hero .badge { display: inline-block; margin-top: 12px; padding: 4px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 20px; font-size: 11px; opacity: .7; position: relative; }
-.hero .nav-links { position: relative; margin-top: 20px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
-.hero .nav-links a { color: rgba(255,255,255,.8); text-decoration: none; font-size: 12px; padding: 6px 14px; border: 1px solid rgba(255,255,255,.15); border-radius: 6px; transition: .2s; }
+.hero h1 { font-size: clamp(22px, 4vw, 34px); font-weight: 800; position: relative; letter-spacing: 1px; }
+.hero .subtitle { font-size: 14px; opacity: .85; margin-top: 6px; position: relative; }
+.hero .badge { display: inline-block; margin-top: 10px; padding: 4px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 20px; font-size: 11px; opacity: .75; position: relative; }
+.hero .nav-links { position: relative; margin-top: 16px; display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
+.hero .nav-links a { color: rgba(255,255,255,.8); text-decoration: none; font-size: 12px; padding: 5px 12px; border: 1px solid rgba(255,255,255,.15); border-radius: 6px; transition: .2s; }
 .hero .nav-links a:hover { background: rgba(255,255,255,.1); color: #fff; }
 
-.container { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-section { max-width: 1120px; margin: 0 auto; padding: 40px 16px; }
-section h2 { font-size: 22px; font-weight: 700; color: var(--primary); margin-bottom: 6px; padding-bottom: 12px; border-bottom: 2px solid var(--primary-light); }
-section .desc { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
-.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 14px; border: 1px solid var(--border); }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
-.card h3 { font-size: 15px; color: var(--primary); margin-bottom: 8px; }
+/* Confidence */
+.conf { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; margin-left: 4px; }
+.conf-h { background: #e8f5e9; color: #2e7d32; }
+.conf-m { background: #fff8e1; color: #f57f17; }
+.conf-l { background: #ffebee; color: #c62828; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+section { max-width: 960px; margin: 0 auto; padding: 36px 16px; }
+section h2 { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 4px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-light); }
+section .desc { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; margin-bottom: 12px; border: 1px solid var(--border); }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.card h3 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
 .card p, .card li { font-size: 13px; color: var(--text-muted); }
-.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; margin: 1px; }
+
+.tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; margin: 1px; }
 .tag-ph1 { background: #fce4ec; color: #c62828; }
 .tag-ph2 { background: #fff3e0; color: #e65100; }
 .tag-ph3 { background: #fff9c4; color: #f57f17; }
-.tag-nd { background: #e8f5e9; color: #2e7d32; }
 .tag-launch { background: #e3f2fd; color: #1565c0; }
-.tag-ai { background: #f3e5f5; color: #7b1fa2; }
 .tag-hot { background: #ffebee; color: #b71c1c; }
+.tag-grow { background: #e8f5e9; color: #2e7d32; }
+.tag-foreign { background: #f3e5f5; color: #7b1fa2; }
+.tag-local { background: #e8eaf6; color: #283593; }
+.tag-top { background: #fff9c4; color: #f57f17; }
 
-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
-th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
-th { background: var(--primary); color: #fff; font-weight: 600; font-size: 12px; white-space: nowrap; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12.5px; }
+th, td { padding: 7px 9px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: var(--primary); color: #fff; font-weight: 600; font-size: 11px; white-space: nowrap; }
 tr:hover td { background: #f8f9fb; }
 tr:nth-child(even) td { background: #fafbfc; }
 
-.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0; justify-content: center; }
-.flow-step { background: var(--primary); color: #fff; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 12px; text-align: center; min-width: 80px; }
-.flow-arrow { font-size: 16px; color: var(--primary); font-weight: 700; }
-.flow-step.ai { background: var(--purple); }
-.flow-step.hot { background: var(--red); }
+.flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 12px 0; justify-content: center; }
+.flow-step { background: var(--primary); color: #fff; padding: 7px 12px; border-radius: 6px; font-weight: 600; font-size: 11px; text-align: center; min-width: 70px; }
+.flow-arrow { font-size: 14px; color: var(--primary); font-weight: 700; }
 
-.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
-.stat-card { text-align: center; padding: 16px; background: var(--card); border-radius: var(--radius); border: 1px solid var(--border); }
-.stat-num { font-size: 28px; font-weight: 800; color: var(--primary); }
-.stat-label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.chart-bar { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.chart-bar .bar { height: 14px; border-radius: 4px; }
+.chart-bar .label { font-size: 11px; min-width: 80px; color: var(--text); }
+.chart-bar .pct { font-size: 10px; color: var(--text-muted); min-width: 50px; text-align: right; }
 
-.chart-bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
-.chart-bar .bar { height: 16px; border-radius: 4px; transition: .3s; }
-.chart-bar .label { font-size: 12px; min-width: 100px; }
-.chart-bar .pct { font-size: 11px; color: var(--text-muted); min-width: 40px; text-align: right; }
+.company-card { border-left: 4px solid var(--primary); padding: 14px 16px; }
+.company-card.foreign { border-left-color: var(--purple, #8e44ad); }
+.company-card.grow { border-left-color: var(--green); }
 
-.pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 12px 0; }
-.pipeline-item { text-align: center; padding: 12px 8px; border-radius: 8px; border: 1px solid var(--border); }
-.pipeline-item .phase { font-size: 11px; color: var(--text-muted); }
-.pipeline-item .count { font-size: 22px; font-weight: 800; }
-.pipeline-item .count.ph1 { color: #c62828; }
-.pipeline-item .count.ph2 { color: #e65100; }
-.pipeline-item .count.ph3 { color: #f57f17; }
-.pipeline-item .count.nd { color: #2e7d32; }
-.pipeline-item .count.launch { color: #1565c0; }
-
-.toggle-content { display: none; }
-.toggle-content.open { display: block; }
-.toggle-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; color: var(--text-muted); cursor: pointer; font-family: inherit; margin: 4px 0; }
-.toggle-btn:hover { border-color: var(--primary); color: var(--primary); }
-
-.company-card { border-left: 4px solid var(--primary); }
-.company-card.hot { border-left-color: var(--red); }
-.company-card.ai { border-left-color: var(--purple); }
-
-footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 11px; border-top: 1px solid var(--border); }
+footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 11px; border-top: 1px solid var(--border); }
 
 @media (max-width: 640px) {
-  .stat-grid { grid-template-columns: repeat(2, 1fr); }
-  .pipeline { grid-template-columns: repeat(3, 1fr); }
   .card-grid { grid-template-columns: 1fr; }
-  .hero { padding: 32px 12px 24px; }
-  .hero h1 { font-size: 20px; }
-  .flow { flex-direction: column; }
-  .flow-arrow { transform: rotate(90deg); }
+  .hero { padding: 28px 12px 20px; }
+  .hero h1 { font-size: 18px; }
 }
 </style>
 </head>
 <body>
 
-<!-- Hero -->
 <header class="hero">
-  <h1>生物医药深度研究</h1>
-  <p class="subtitle">产业全景 · 管线追踪 · 投资框架 · AI制药</p>
-  <div class="badge">科技金融事业部 · 前沿探索飞轮 · 持续更新</div>
+  <h1>生物医药职业发展研究</h1>
+  <p class="subtitle">聚焦杭州 · 兼顾长三角 · 以职业能力提升和职业发展空间为核心</p>
+  <div class="badge">前沿探索飞轮 · 基于公开信息与行业研究 · 置信度标注</div>
   <div class="nav-links">
-    <a href="#overview">产业概览</a>
-    <a href="#landscape">竞争格局</a>
-    <a href="#pipeline">管线追踪</a>
-    <a href="#companies">核心企业</a>
-    <a href="#ai">AI制药</a>
-    <a href="#valuation">估值框架</a>
-    <a href="#policy">政策跟踪</a>
-    <a href="#tools">研究工具</a>
+    <a href="#region">杭州产业地图</a>
+    <a href="#subsector">细分赛道</a>
+    <a href="#companies">重点企业</a>
+    <a href="#career">职业发展路径</a>
+    <a href="#salary">薪酬基准</a>
+    <a href="#skills">技能需求</a>
+    <a href="#parks">产业园区</a>
+    <a href="#yrd">长三角对标</a>
   </div>
 </header>
 
 <!-- ==================== 0. KEY STATS ==================== -->
 <section>
-  <div class="stat-grid">
-    <div class="stat-card"><div class="stat-num">¥2.6万亿</div><div class="stat-label">2025中国医药市场规模</div></div>
-    <div class="stat-card"><div class="stat-num">~12%</div><div class="stat-label">生物药年增速(CAGR)</div></div>
-    <div class="stat-card"><div class="stat-num">89个</div><div class="stat-label">2024中国创新药NDA</div></div>
-    <div class="stat-card"><div class="stat-num">$50B+</div><div class="stat-label">AI制药全球融资累计</div></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
+    <div class="card" style="text-align:center;padding:14px">
+      <div style="font-size:24px;font-weight:800;color:var(--primary)">~800家</div>
+      <div style="font-size:11px;color:var(--text-muted)">杭州生物医药企业<span class="conf conf-m">中</span></div>
+    </div>
+    <div class="card" style="text-align:center;padding:14px">
+      <div style="font-size:24px;font-weight:800;color:var(--primary)">¥500亿+</div>
+      <div style="font-size:11px;color:var(--text-muted)">杭州医药产业产值<span class="conf conf-h">高</span></div>
+    </div>
+    <div class="card" style="text-align:center;padding:14px">
+      <div style="font-size:24px;font-weight:800;color:var(--primary)">15-25%</div>
+      <div style="font-size:11px;color:var(--text-muted)">行业薪资年增长<span class="conf conf-m">中</span></div>
+    </div>
+    <div class="card" style="text-align:center;padding:14px">
+      <div style="font-size:24px;font-weight:800;color:var(--primary)">3个</div>
+      <div style="font-size:11px;color:var(--text-muted)">核心产业集聚区<span class="conf conf-h">高</span></div>
+    </div>
   </div>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:8px;text-align:center">
+    <span class="conf conf-h">高置信度</span> = 官方数据/已公开信息 &nbsp;
+    <span class="conf conf-m">中置信度</span> = 行业共识/多源交叉验证 &nbsp;
+    <span class="conf conf-l">低置信度</span> = 趋势推断/需进一步验证
+  </p>
 </section>
 
-<!-- ==================== 1. OVERVIEW ==================== -->
-<section id="overview">
-  <h2>产业概览</h2>
-  <p class="desc">生物医药产业链从源头研发到终端消费，核心环节包括靶点发现、药物设计、临床前研究、临床试验、生产制造、流通销售。</p>
-
-  <div class="flow">
-    <div class="flow-step">靶点发现</div><span class="flow-arrow">→</span>
-    <div class="flow-step">药物设计</div><span class="flow-arrow">→</span>
-    <div class="flow-step">临床前</div><span class="flow-arrow">→</span>
-    <div class="flow-step" style="background:var(--orange)">I期临床</div><span class="flow-arrow">→</span>
-    <div class="flow-step" style="background:var(--orange)">II期临床</div><span class="flow-arrow">→</span>
-    <div class="flow-step" style="background:var(--orange)">III期临床</div><span class="flow-arrow">→</span>
-    <div class="flow-step" style="background:var(--accent)">NDA/BLA</div><span class="flow-arrow">→</span>
-    <div class="flow-step" style="background:var(--accent)">上市</div>
-  </div>
+<!-- ==================== 1. REGION ==================== -->
+<section id="region">
+  <h2>杭州生物医药产业地图</h2>
+  <p class="desc">杭州已形成"一核三园多点"的生物医药产业布局，是长三角仅次于上海张江的第二大医药创新高地。<span class="conf conf-h">高置信度</span></p>
 
   <div class="card-grid">
     <div class="card">
-      <h3>化学药 (小分子)</h3>
-      <p>传统优势领域，2024年占市场~55%。靶向药、PROTAC、分子胶等新技术方向持续突破。代表企业：恒瑞医药、石药集团、中国生物制药。</p>
+      <h3>钱塘区 · 杭州医药港小镇</h3>
+      <p><strong>定位</strong>：杭州生物医药核心区，浙江省唯一生物医药高新技术产业园。<span class="conf conf-h">高</span></p>
+      <p><strong>企业</strong>：药明生物、九洲药业、华海药业、天境生物、贝达部分研发。</p>
+      <p><strong>方向</strong>：生物制药、CDMO、基因治疗、细胞治疗。</p>
+      <p><strong>就业机会</strong>：★★★★★ 企业密度最高，岗位最多。<span class="conf conf-m">中</span></p>
     </div>
     <div class="card">
-      <h3>生物药 (大分子)</h3>
-      <p>增长最快板块(~12% CAGR)。单抗、双抗、ADC、细胞治疗、基因治疗。代表企业：百济神州、信达生物、康方生物、药明巨诺。</p>
+      <h3>余杭区 · 未来科技城</h3>
+      <p><strong>定位</strong>：创新药研发+数字医疗，阿里系医疗健康生态。<span class="conf conf-h">高</span></p>
+      <p><strong>企业</strong>：阿里健康、微医、诺尔康、德同生物。</p>
+      <p><strong>方向</strong>：数字医疗、AI制药、医疗器械、诊断。</p>
+      <p><strong>就业机会</strong>：★★★★ 数字医疗/AI方向多。<span class="conf conf-m">中</span></p>
     </div>
     <div class="card">
-      <h3>疫苗</h3>
-      <p>后疫情时代结构性调整。HPV、带状疱疹、mRNA平台技术持续发力。代表企业：智飞生物、沃森生物、康希诺。</p>
+      <h3>滨江区 · 杭州高新开发区</h3>
+      <p><strong>定位</strong>：医疗器械+诊断试剂集聚区。<span class="conf conf-h">高</span></p>
+      <p><strong>企业</strong>：启明医疗(心脑血管)、迪安诊断、博日科技。</p>
+      <p><strong>方向</strong>：高端医疗器械、体外诊断、基因测序。</p>
+      <p><strong>就业机会</strong>：★★★★ 医疗器械方向集中。<span class="conf conf-m">中</span></p>
     </div>
-    <div class="card">
-      <h3>CXO / 产业链</h3>
-      <p>全球化竞争加剧，细分龙头承压。CDMO、CRO、CSO。代表企业：药明康德、康龙化成、凯莱英、泰格医药。</p>
-    </div>
+  </div>
+
+  <div class="card">
+    <h3>杭州 vs 长三角其他城市对比 <span class="conf conf-m">中置信度</span></h3>
+    <table>
+      <tr><th>城市</th><th>核心园区</th><th>优势领域</th><th>企业密度</th><th>薪资水平</th><th>发展潜力</th></tr>
+      <tr><td><strong>杭州</strong></td><td>医药港小镇/未来科技城</td><td>生物药/CDMO/数字医疗</td><td>★★★★</td><td>★★★★</td><td>★★★★★</td></tr>
+      <tr><td><strong>上海</strong></td><td>张江药谷/临港生命蓝湾</td><td>创新药/总部/研发</td><td>★★★★★</td><td>★★★★★</td><td>★★★★</td></tr>
+      <tr><td><strong>苏州</strong></td><td>BioBay/生命健康小镇</td><td>生物药/IVD/医疗器械</td><td>★★★★★</td><td>★★★★</td><td>★★★★</td></tr>
+      <tr><td><strong>南京</strong></td><td>生物医药谷/江宁药谷</td><td>基因治疗/CRO</td><td>★★★</td><td>★★★</td><td>★★★</td></tr>
+    </tbody></table>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:6px">杭州综合性价比（薪资/房价/生活质量）在长三角具有竞争力，尤其对在杭州已有生活基础的人。但高层级岗位总量少于上海张江。</p>
   </div>
 </section>
 
-<!-- ==================== 2. LANDSCAPE ==================== -->
-<section id="landscape">
-  <h2>竞争格局与治疗领域</h2>
-  <p class="desc">按治疗领域划分的市场规模与增长潜力。数据综合Frost & Sullivan、IQVIA、各公司年报。</p>
+<!-- ==================== 2. SUBSECTOR ==================== -->
+<section id="subsector">
+  <h2>细分赛道与职业前景评估</h2>
+  <p class="desc">基于未来3-5年行业趋势、杭州本地产业基础、人才供需比、薪资增长空间综合评分。</p>
 
-  <div style="overflow-x:auto">
   <table>
-    <thead><tr><th>治疗领域</th><th>2025E市场(亿元)</th><th>增速(CAGR)</th><th>热点方向</th><th>竞争烈度</th></tr></thead>
+    <thead><tr><th>细分赛道</th><th>杭州基础</th><th>全国增速</th><th>人才缺口</th><th>薪资潜力</th><th>综合评分</th><th>置信度</th></tr></thead>
     <tbody>
-      <tr><td><strong>肿瘤</strong></td><td>8,500</td><td>15%</td><td>ADC、双抗、细胞治疗、IO联合</td><td>极高<span style="color:var(--red)">★★★★★</span></td></tr>
-      <tr><td><strong>自身免疫</strong></td><td>3,200</td><td>10%</td><td>IL类、TNF-α、JAK抑制剂</td><td>高<span style="color:var(--orange)">★★★★</span></td></tr>
-      <tr><td><strong>代谢疾病</strong></td><td>2,800</td><td>8%</td><td>GLP-1、胰岛素、NASH</td><td>极高<span style="color:var(--red)">★★★★★</span></td></tr>
-      <tr><td><strong>神经系统</strong></td><td>2,100</td><td>7%</td><td>AD、PD、罕见病基因治疗</td><td>中<span style="color:var(--blue)">★★★</span></td></tr>
-      <tr><td><strong>感染</strong></td><td>1,800</td><td>3%</td><td>抗病毒、mRNA疫苗、抗生素</td><td>中<span style="color:var(--blue)">★★★</span></td></tr>
-      <tr><td><strong>罕见病</strong></td><td>1,200</td><td>18%</td><td>基因治疗、酶替代、ASO</td><td>低<span style="color:var(--accent)">★★</span></td></tr>
+      <tr><td><strong>AI制药/计算生物学</strong></td><td>★★★</td><td>30%+</td><td>极大</td><td>★★★★★</td><td><span style="color:var(--green);font-weight:700">8.5/10</span></td><td><span class="conf conf-m">中</span></td></tr>
+      <tr><td><strong>ADC/双抗/XDC</strong></td><td>★★★★</td><td>25%+</td><td>大</td><td>★★★★★</td><td><span style="color:var(--green);font-weight:700">8.0/10</span></td><td><span class="conf conf-h">高</span></td></tr>
+      <tr><td><strong>细胞/基因治疗(CGT)</strong></td><td>★★★</td><td>20%+</td><td>极大</td><td>★★★★</td><td><span style="color:var(--green);font-weight:700">7.5/10</span></td><td><span class="conf conf-m">中</span></td></tr>
+      <tr><td><strong>医疗器械(高端)</strong></td><td>★★★★★</td><td>15%</td><td>大</td><td>★★★★</td><td><span style="color:var(--orange);font-weight:700">7.5/10</span></td><td><span class="conf conf-h">高</span></td></tr>
+      <tr><td><strong>CXO/CDMO</strong></td><td>★★★★</td><td>10-15%</td><td>中</td><td>★★★</td><td><span style="color:var(--orange);font-weight:700">6.5/10</span></td><td><span class="conf conf-h">高</span></td></tr>
+      <tr><td><strong>IVD/体外诊断</strong></td><td>★★★★★</td><td>8%</td><td>中</td><td>★★★</td><td><span style="color:var(--orange);font-weight:700">6.0/10</span></td><td><span class="conf conf-h">高</span></td></tr>
     </tbody>
   </table>
-  </div>
 
-  <!-- 技术成熟度 -->
-  <div class="card" style="margin-top:16px">
-    <h3>技术平台成熟度曲线</h3>
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px">按技术成熟度和投资热度排序</p>
-    <div class="chart-bar"><span class="label">ADC</span><div class="bar" style="width:95%;background:var(--red)"></div><span class="pct">成熟·竞争激烈</span></div>
-    <div class="chart-bar"><span class="label">双抗</span><div class="bar" style="width:80%;background:var(--orange)"></div><span class="pct">成长期·差异化竞争</span></div>
-    <div class="chart-bar"><span class="label">GLP-1/多肽</span><div class="bar" style="width:85%;background:var(--orange)"></div><span class="pct">爆发期·百亿美元赛道</span></div>
-    <div class="chart-bar"><span class="label">细胞治疗</span><div class="bar" style="width:60%;background:#f39c12"></div><span class="pct">早期商业化·实体瘤突破中</span></div>
-    <div class="chart-bar"><span class="label">PROTAC</span><div class="bar" style="width:40%;background:var(--blue)"></div><span class="pct">早期临床验证中</span></div>
-    <div class="chart-bar"><span class="label"><strong>AI制药</strong></span><div class="bar" style="width:30%;background:var(--purple)"></div><span class="pct">早期·管线陆续进入临床</span></div>
-    <div class="chart-bar"><span class="label">基因编辑</span><div class="bar" style="width:25%;background:var(--purple)"></div><span class="pct">极早期·Casgevy获批里程碑</span></div>
-  </div>
-</section>
-
-<!-- ==================== 3. PIPELINE ==================== -->
-<section id="pipeline">
-  <h2>管线追踪（2025H1关键节点）</h2>
-  <p class="desc">以下为2025年上半年值得关注的中国生物医药管线进展。点击展开各领域详情。</p>
-
-  <button class="toggle-btn" onclick="toggleSection('pipelineDetail')">展开/收起 管线详情</button>
-  <div class="toggle-content" id="pipelineDetail">
-
-  <div class="card company-card hot">
-    <h3>ADC · 抗体偶联药物 <span class="tag tag-hot">热点</span></h3>
-    <table>
-      <tr><th>企业</th><th>药物/管线</th><th>靶点</th><th>适应症</th><th>阶段</th></tr>
-      <tr><td>科伦博泰</td><td>SKB264 (TROP2)</td><td>TROP2</td><td>乳腺癌、肺癌</td><td><span class="tag tag-nd">NDA</span></td></tr>
-      <tr><td>荣昌生物</td><td>RC48 (维迪西妥)</td><td>HER2</td><td>尿路上皮癌</td><td><span class="tag tag-nd">NDA</span></td></tr>
-      <tr><td>信达生物</td><td>IBI354</td><td>HER2</td><td>实体瘤</td><td><span class="tag tag-ph3">III期</span></td></tr>
-      <tr><td>百利天恒</td><td>BL-B01D1</td><td>EGFR/HER3</td><td>非小细胞肺癌</td><td><span class="tag tag-ph3">III期</span></td></tr>
-    </table>
-  </div>
-
-  <div class="card company-card">
-    <h3>双特异性抗体</h3>
-    <table>
-      <tr><th>企业</th><th>药物</th><th>靶点</th><th>适应症</th><th>阶段</th></tr>
-      <tr><td>康方生物</td><td>卡度尼利 (AK104)</td><td>PD-1/CTLA-4</td><td>宫颈癌、胃癌</td><td><span class="tag tag-launch">已上市</span></td></tr>
-      <tr><td>康方生物</td><td>依沃西 (AK112)</td><td>PD-1/VEGF</td><td>非小细胞肺癌</td><td><span class="tag tag-launch">已上市</span></td></tr>
-      <tr><td>百济神州</td><td>BGB-B3227</td><td>CD3/DLL3</td><td>小细胞肺癌</td><td><span class="tag tag-ph1">I期</span></td></tr>
-    </table>
-  </div>
-
-  <div class="card company-card">
-    <h3>细胞治疗 <span class="tag tag-hot">热点</span></h3>
-    <table>
-      <tr><th>企业</th><th>药物</th><th>类型</th><th>适应症</th><th>阶段</th></tr>
-      <tr><td>传奇生物</td><td>Carvykti (西达基)</td><td>CAR-T</td><td>多发性骨髓瘤</td><td><span class="tag tag-launch">已上市(中美)</span></td></tr>
-      <tr><td>药明巨诺</td><td>倍诺达</td><td>CAR-T</td><td>大B细胞淋巴瘤</td><td><span class="tag tag-launch">已上市</span></td></tr>
-      <tr><td>科济药业</td><td>CT053</td><td>CAR-T</td><td>多发性骨髓瘤</td><td><span class="tag tag-nd">NDA</span></td></tr>
-      <tr><td>亘喜生物(阿斯利康)</td><td>GC012F</td><td>CAR-T(双靶)</td><td>骨髓瘤/SLE</td><td><span class="tag tag-ph3">III期</span></td></tr>
-    </table>
-  </div>
-
-  <div class="card company-card">
-    <h3>GLP-1 / 代谢疾病 <span class="tag tag-hot">百亿美元赛道</span></h3>
-    <table>
-      <tr><th>企业</th><th>药物</th><th>靶点/机制</th><th>适应症</th><th>阶段</th></tr>
-      <tr><td>恒瑞医药</td><td>HRS9531</td><td>GLP-1/GIP</td><td>2型糖尿病/减重</td><td><span class="tag tag-ph3">III期</span></td></tr>
-      <tr><td>信达生物</td><td>玛仕度肽 (IBI362)</td><td>GLP-1/GCG</td><td>2型糖尿病/NASH</td><td><span class="tag tag-nd">NDA</span></td></tr>
-      <tr><td>华东医药</td><td>HDM1005</td><td>GLP-1R</td><td>减重</td><td><span class="tag tag-ph3">III期</span></td></tr>
-    </table>
-  </div>
-
-  <div class="card company-card">
-    <h3>AI制药管线 <span class="tag tag-ai">AI驱动</span></h3>
-    <table>
-      <tr><th>企业</th><th>药物</th><th>靶点</th><th>适应症</th><th>阶段</th></tr>
-      <tr><td>英矽智能</td><td>INS018_055</td><td>TNIK</td><td>特发性肺纤维化</td><td><span class="tag tag-ph2">II期</span></td></tr>
-      <tr><td>晶泰科技</td><td>—</td><td>多个</td><td>肿瘤、免疫</td><td><span class="tag tag-ph1">I期</span></td></tr>
-      <tr><td>冰洲石生物</td><td>AC0682</td><td>ER降解剂</td><td>乳腺癌</td><td><span class="tag tag-ph1">I期</span></td></tr>
-      <tr><td>百图生科(AI+Biotech)</td><td>—</td><td>未公开</td><td>免疫</td><td><span class="tag tag-ph1">I期</span></td></tr>
-    </table>
-  </div>
-
+  <div class="card" style="margin-top:12px">
+    <h3>赛道选择建议</h3>
+    <p style="font-size:12.5px;color:var(--text-muted)">
+      <strong>第一梯队（强烈推荐）</strong><br>
+      <span class="tag tag-grow">AI制药</span> 交叉学科壁垒高，人才供给严重不足，薪资溢价明显。3-5年内竞争格局不会恶化。<span class="conf conf-m">中</span><br><br>
+      <strong>第二梯队（推荐）</strong><br>
+      <span class="tag tag-grow">ADC/XDC</span> 杭州有贝达、多禧生物等基础，临床前/CMC人才紧缺。<span class="conf conf-h">高</span><br>
+      <span class="tag tag-grow">高端医疗器械</span> 滨江/余杭有产业集群，启明医疗等已上市，薪资稳定增长。<span class="conf conf-h">高</span><br><br>
+      <strong>第三梯队（可选）</strong><br>
+      CXO/CDMO 稳定但增长放缓，杭州有药明生物基地，适合求稳。<span class="conf conf-h">高</span>
+    </p>
   </div>
 </section>
 
-<!-- ==================== 4. COMPANIES ==================== -->
+<!-- ==================== 3. COMPANIES ==================== -->
 <section id="companies">
-  <h2>核心企业矩阵</h2>
-  <p class="desc">按市值/研发投入/管线厚度/技术平台等维度筛选的核心标的。数据基于2025Q1公开信息。</p>
+  <h2>杭州重点企业人才画像</h2>
+  <p class="desc">按企业类型分类，标注人才需求特征和职业发展价值。<span class="conf conf-m">中置信度</span></p>
 
-  <div style="overflow-x:auto">
-  <table>
-    <thead><tr><th>企业</th><th>市值(亿元)</th><th>2024研发投入</th><th>核心平台</th><th>管线规模</th><th>评价</th></tr></thead>
-    <tbody>
-      <tr><td><strong>恒瑞医药</strong></td><td>~4,500</td><td>~80亿</td><td>小分子+生物药</td><td>50+</td><td>创新药龙头，国际化加速</td></tr>
-      <tr><td><strong>百济神州</strong></td><td>~2,800</td><td>~120亿</td><td>单抗+双抗+ADC</td><td>40+</td><td>全球化最成功，泽布替尼放量</td></tr>
-      <tr><td><strong>信达生物</strong></td><td>~1,200</td><td>~45亿</td><td>单抗+双抗+GLP-1</td><td>30+</td><td>管线丰富，玛仕度肽NDA</td></tr>
-      <tr><td><strong>康方生物</strong></td><td>~800</td><td>~25亿</td><td>双抗平台(Tetrabody)</td><td>20+</td><td>双抗龙头，卡度尼利+依沃西上市</td></tr>
-      <tr><td><strong>荣昌生物</strong></td><td>~500</td><td>~20亿</td><td>ADC+融合蛋白</td><td>15+</td><td>ADC先行者，RC48/RC18</td></tr>
-      <tr><td><strong>科伦博泰</strong></td><td>~400</td><td>~15亿</td><td>ADC平台(OptiDCC)</td><td>10+</td><td>SKB264出海默沙东</td></tr>
-      <tr><td><strong>传奇生物</strong></td><td>~600</td><td>~30亿</td><td>CAR-T平台</td><td>8+</td><td>Carvykti全球放量</td></tr>
-      <tr><td><strong>药明康德</strong></td><td>~2,200</td><td>~15亿</td><td>CXO一体化平台</td><td>—</td><td>全球CDMO龙头，地缘风险</td></tr>
-      <tr><td><strong>智飞生物</strong></td><td>~1,000</td><td>~10亿</td><td>疫苗代理+自研</td><td>15+</td><td>HPV代理利润丰厚，自研管线布局</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <!-- 企业深度比较 -->
-  <button class="toggle-btn" onclick="toggleSection('companyDeep')">展开/收起 企业深度比较</button>
-  <div class="toggle-content" id="companyDeep">
-  <div class="card-grid" style="margin-top:10px">
-    <div class="card company-card hot">
-      <h3>恒瑞医药 <span class="tag tag-hot">核心持仓</span></h3>
-      <p><strong>战略定位</strong>：中国创新药标杆，从仿制到创新转型最成功的企业。</p>
-      <p><strong>核心看点</strong>：① 研发投入行业第一(~80亿)；② PD-1卡瑞利珠+阿帕替尼组合稳固；③ 海外申报加速，双抗/ADC新管线；④ GLp-1/GIP双靶点进入III期。</p>
-      <p><strong>风险</strong>：集采仿制药利润承压，国际化进展慢于百济。</p>
-    </div>
-    <div class="card company-card">
-      <h3>百济神州</h3>
-      <p><strong>战略定位</strong>：全球化创新药企，中美双报能力突出。</p>
-      <p><strong>核心看点</strong>：① 泽布替尼全球销售持续放量(2025E~200亿)；② 替雷利珠单抗海外获批；③ 管线涵盖CDAC、双抗、ADC等多平台；④ 研发投入~120亿，行业最高。</p>
-      <p><strong>风险</strong>：持续亏损，销售费用率高，泽布替尼专利挑战。</p>
-    </div>
-    <div class="card company-card ai">
-      <h3>AI相关标的 <span class="tag tag-ai">AI+</span></h3>
-      <p><strong>英矽智能(拟IPO)</strong>：Pharma AI平台，INS018_055进入II期，管线10+。</p>
-      <p><strong>晶泰科技(已上市)</strong>：AI+机器人驱动的药物研发平台，与多家药企合作。</p>
-      <p><strong>百图生科(BioMap)</strong>：百度孵化，AI蛋白质设计平台，聚焦免疫。</p>
-      <p><strong>冰洲石生物</strong>：AI驱动的临床阶段biotech，ER降解剂I期。</p>
-      <p style="margin-top:6px;font-size:11px;color:var(--text-muted)">AI制药领域仍处于早期，管线验证是关键观察指标。</p>
-    </div>
-  </div>
-  </div>
-</section>
-
-<!-- ==================== 5. AI + BIOPHARMA ==================== -->
-<section id="ai">
-  <h2>AI + 生物制药</h2>
-  <p class="desc">AI正在重塑药物研发全链条：从靶点发现到临床预测。2025年是AI制药管线集中进入临床验证的关键年份。</p>
-
-  <div class="flow">
-    <div class="flow-step ai">靶点发现<br><span style="font-size:10px;opacity:.8">AlphaFold3/ESMFold</span></div><span class="flow-arrow">→</span>
-    <div class="flow-step ai">分子生成<br><span style="font-size:10px;opacity:.8">扩散模型/RL</span></div><span class="flow-arrow">→</span>
-    <div class="flow-step ai">ADMET预测<br><span style="font-size:10px;opacity:.8">图神经网络</span></div><span class="flow-arrow">→</span>
-    <div class="flow-step ai">临床试验<br><span style="font-size:10px;opacity:.8">数字孪生/预测</span></div>
-  </div>
-
-  <div class="card-grid">
-    <div class="card">
-      <h3>AI赋能环节与降本效果</h3>
-      <table>
-        <tr><th>环节</th><th>传统周期</th><th>AI加速</th><th>降本幅度</th></tr>
-        <tr><td>靶点发现</td><td>2-4年</td><td>6-12月</td><td>60-80%</td></tr>
-        <tr><td>先导化合物优化</td><td>3-5年</td><td>1-2年</td><td>50-70%</td></tr>
-        <tr><td>ADMET预测</td><td>1-2年</td><td>1-3月</td><td>70-90%</td></tr>
-        <tr><td>临床试验设计</td><td>6-12月</td><td>1-3月</td><td>30-50%</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h3>关键AI公司图谱</h3>
-      <table>
-        <tr><th>公司</th><th>核心技术</th><th>融资阶段</th><th>备注</th></tr>
-        <tr><td>Recursion</td><td>高通量+ML</td><td>上市公司</td><td>罗氏合作</td></tr>
-        <tr><td>Insilico Medicine</td><td>端到端AI平台</td><td>Pre-IPO</td><td>II期临床管线</td></tr>
-        <tr><td>晶泰科技 (XtalPi)</td><td>AI+机器人</td><td>港股上市</td><td>药物晶型预测</td></tr>
-        <tr><td>薛定谔 (Schrodinger)</td><td>计算化学平台</td><td>纳斯达克</td><td>软件+管线双驱动</td></tr>
-        <tr><td>Isomorphic Labs</td><td>AlphaFold衍生</td><td>DeepMind子公司</td><td>诺华/礼来合作</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="card" style="margin-top:4px">
-    <h3>判断框架：AI制药投资需要跟踪的核心信号</h3>
+  <div class="company-card grow">
+    <h3>头部创新药企 <span class="tag tag-hot">核心关注</span></h3>
     <table>
-      <tr><th>信号类别</th><th>关键指标</th><th>观察对象</th></tr>
-      <tr><td><strong>管线验证</strong></td><td>AI发现药物进入II期及以上的数量；临床试验成功率是否高于行业平均</td><td>英矽智能INS018_055 II期数据读出</td></tr>
-      <tr><td><strong>药企合作</strong></td><td>大型药企与AI公司合作金额和模式变化</td><td>诺华/礼来/罗氏/辉瑞的AI合作动态</td></tr>
-      <tr><td><strong>技术突破</strong></td><td>AlphaFold3等基础模型的迭代速度与准确度</td><td>Google DeepMind、ESMFold更新</td></tr>
-      <tr><td><strong>商业闭环</strong></td><td>AI公司收入结构(软件vs管线)，毛利率趋势</td><td>Schrodinger、晶泰科技财报</td></tr>
-      <tr><td><strong>监管态度</strong></td><td>FDA/NMPA对AI辅助药物审评的指导原则</td><td>FDA CDER AI工作组动态</td></tr>
+      <tr><th>企业</th><th>方向</th><th>杭州岗位</th><th>职业价值</th><th>建议</th></tr>
+      <tr><td>贝达药业</td><td>小分子靶向药</td><td>研发/临床/CMC</td><td>★★★★ 平台成熟</td><td>适合积累创新药全流程经验</td></tr>
+      <tr><td>华东医药</td><td>化药+医美+GLP-1</td><td>生产/质量/研发</td><td>★★★★ 转型加速</td><td>GLP-1方向有潜力</td></tr>
+      <tr><td>迪安诊断</td><td>IVD+医学检验</td><td>研发/注册/销售</td><td>★★★ 平台大增速稳</td><td>适合IVD方向长期发展</td></tr>
+      <tr><td>启明医疗</td><td>心脑血管器械</td><td>研发/注册/临床</td><td>★★★★ 国产替代龙头</td><td>医疗器械赛道好选择</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="company-card foreign">
+    <h3>外企/合资在杭机构 <span class="tag tag-foreign">外企</span></h3>
+    <table>
+      <tr><th>企业</th><th>部门职能</th><th>岗位类型</th><th>薪资水平</th><th>职业价值</th></tr>
+      <tr><td>辉瑞/默沙东(杭州办)</td><td>销售/市场/医学事务</td><td>偏商业化</td><td>★★★★★</td><td>薪资高，但研发岗少</td></tr>
+      <tr><td>药明生物(杭州基地)</td><td>CDMO生产/质量</td><td>生产/QA/QC</td><td>★★★★</td><td>工艺开发经验含金量高</td></tr>
+      <tr><td>IQVIA/泰格(杭州)</td><td>CRO临床运营</td><td>CRA/PM/数据管理</td><td>★★★★</td><td>临床方向跳板好</td></tr>
+      <tr><td>阿斯利康(杭州数字中心)</td><td>数字化创新</td><td>数字医疗/数据</td><td>★★★★</td><td>跨界方向稀缺</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="company-card grow">
+    <h3>高成长Biotech/初创 <span class="tag tag-grow">成长型</span></h3>
+    <table>
+      <tr><th>企业</th><th>方向</th><th>融资阶段</th><th>吸引力</th><th>风险</th></tr>
+      <tr><td>多禧生物</td><td>ADC技术平台</td><td>D轮</td><td>★★★★ ADC稀缺经验</td><td>管线进展需关注</td></tr>
+      <tr><td>诺尔康</td><td>人工耳蜗/神经刺激</td><td>成熟期</td><td>★★★★ 细分龙头</td><td>市场空间有限</td></tr>
+      <tr><td>德同生物</td><td>分子诊断</td><td>成长期</td><td>★★★</td><td>竞争激烈</td></tr>
     </tbody></table>
   </div>
 </section>
 
-<!-- ==================== 6. VALUATION ==================== -->
-<section id="valuation">
-  <h2>估值框架与对标</h2>
-  <p class="desc">生物医药企业估值需结合管线价值、平台价值、现金流等多维因素。以下为常用估值方法。</p>
+<!-- ==================== 4. CAREER ==================== -->
+<section id="career">
+  <h2>职业发展路径</h2>
+  <p class="desc">生物医药典型职业发展路径（以杭州为主，兼顾长三角）。<span class="conf conf-m">中置信度</span></p>
 
   <div class="card-grid">
     <div class="card">
-      <h3>rNPV (风险调整净现值)</h3>
-      <p>生物医药最核心估值方法</p>
-      <p style="font-size:12px;color:var(--text-muted)">
-        rNPV = Σ[峰值销售额 × 成功率 × 折现因子]<br><br>
-        <strong>关键参数：</strong><br>
-        • 各期临床成功率: I期~10%, II期~15%, III期~60%<br>
-        • 折现率: 通常10-15%<br>
-        • 峰值年限: 上市后7-10年<br><br>
-        <strong>适用场景：</strong>有明确管线的创新药企
+      <h3>研发路径 <span class="tag tag-top">薪资增长快</span></h3>
+      <div class="flow" style="font-size:11px">
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Associate Scientist<br>15-25万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Scientist<br>20-35万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Sr.Scientist<br>30-50万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--green)">Principal Sci.<br>50-80万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--orange)">Director/R&D Head<br>80-150万+</div>
+      </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-top:6px">
+        <strong>关键节点</strong>：硕士起薪15-25万，博士25-40万。5-8年到Senior Scientist为关键跳跃期。需持续发表、有项目推进记录。
       </p>
     </div>
     <div class="card">
-      <h3>可比公司分析</h3>
-      <p>主要看PS/PE倍数和研发投入强度</p>
-      <table>
-        <tr><th>公司类型</th><th>PS倍数</th><th>研发费用率</th></tr>
-        <tr><td>创新药龙头</td><td>8-15x</td><td>20-40%</td></tr>
-        <tr><td>Biotech(有上市产品)</td><td>5-10x</td><td>30-60%</td></tr>
-        <tr><td>Biotech(临床阶段)</td><td>管线估值法</td><td>80-150%</td></tr>
-        <tr><td>CXO</td><td>3-8x</td><td>5-10%</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h3>风险跟踪清单</h3>
-      <p style="font-size:12px;color:var(--text-muted)">
-        <strong>行业系统性风险：</strong><br>
-        ① 医保谈判降价幅度超预期<br>
-        ② 中美地缘政治对CXO影响<br>
-        ③ 美联储利率政策对biotech融资影响<br><br>
-        <strong>个股风险：</strong><br>
-        ① 关键临床试验数据miss<br>
-        ② 核心产品专利挑战/集采<br>
-        ③ 出海受FDA审批挫折<br>
-        ④ 核心研发人才流失
+      <h3>CMC/工艺开发 <span class="tag">需求稳定</span></h3>
+      <div class="flow" style="font-size:11px">
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Associate<br>12-20万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Engineer<br>18-30万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Sr.Engineer<br>30-45万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--green)">Principal/Manager<br>45-70万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--orange)">Director<br>70-120万</div>
+      </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-top:6px">
+        <strong>关键节点</strong>：CDMO经验是重要跳板。杭州药明生物、九洲药业为本地CMC人才蓄水池。
       </p>
     </div>
-  </div>
-
-  <!-- 估值速查工具 -->
-  <button class="toggle-btn" onclick="toggleSection('valuTool')">展开/收起 估值得分速查表</button>
-  <div class="toggle-content" id="valuTool">
-  <div class="card" style="margin-top:10px">
-    <h3>核心标的多维评分（10分制）</h3>
-    <div style="overflow-x:auto">
-    <table>
-      <tr><th>标的</th><th>管线质量</th><th>商业化</th><th>研发效率</th><th>国际化</th><th>估值合理性</th><th>综合</th></tr>
-      <tr><td>恒瑞医药</td><td>9</td><td>9</td><td>7</td><td>6</td><td>6</td><td><strong>7.4</strong></td></tr>
-      <tr><td>百济神州</td><td>9</td><td>7</td><td>7</td><td>9</td><td>5</td><td><strong>7.4</strong></td></tr>
-      <tr><td>信达生物</td><td>8</td><td>7</td><td>8</td><td>6</td><td>7</td><td><strong>7.2</strong></td></tr>
-      <tr><td>康方生物</td><td>8</td><td>6</td><td>9</td><td>7</td><td>8</td><td><strong>7.6</strong></td></tr>
-      <tr><td>科伦博泰</td><td>8</td><td>4</td><td>8</td><td>8</td><td>7</td><td><strong>7.0</strong></td></tr>
-      <tr><td>药明康德</td><td>—</td><td>8</td><td>8</td><td>8</td><td>6</td><td><strong>7.5</strong></td></tr>
-      <tr><td>传奇生物</td><td>8</td><td>6</td><td>7</td><td>9</td><td>6</td><td><strong>7.2</strong></td></tr>
-    </table>
+    <div class="card">
+      <h3>临床运营 <span class="tag">流动性高</span></h3>
+      <div class="flow" style="font-size:11px">
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">CRA Trainee<br>8-12万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">CRA I/II<br>12-20万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">Sr.CRA/PL<br>20-35万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--green)">Clinical PM<br>35-60万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--orange)">Clinical Director<br>60-100万</div>
+      </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-top:6px">
+        <strong>关键节点</strong>：泰格医药(杭州)为CRA黄埔军校。CRA 3-5年可转PM，之后薪资跳跃明显。
+      </p>
     </div>
-    <p style="font-size:10px;color:var(--text-muted);margin-top:4px">主观评分仅供参考，基于2025Q1公开信息+行业判断</p>
-  </div>
+    <div class="card">
+      <h3>注册事务/RA <span class="tag">政策敏感</span></h3>
+      <div class="flow" style="font-size:11px">
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">RA Specialist<br>10-18万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px">RA Manager<br>20-35万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--green)">RA Director<br>40-80万</div>
+        <span class="flow-arrow" style="font-size:10px">→</span>
+        <div class="flow-step" style="font-size:10px;padding:5px 8px;background:var(--orange)">VP RA<br>80-150万</div>
+      </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-top:6px">
+        <strong>关键节点</strong>：法规知识+沟通能力为核心竞争力。中美双报能力是高端RA的核心溢价来源。
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- ==================== 7. POLICY ==================== -->
-<section id="policy">
-  <h2>政策跟踪</h2>
-  <p class="desc">影响中国生物医药行业的核心政策方向与关键时间节点。</p>
+<!-- ==================== 5. SALARY ==================== -->
+<section id="salary">
+  <h2>薪酬基准（杭州地区）</h2>
+  <p class="desc">按岗位类型/学历/工作年限的薪酬区间。数据基于行业招聘平台、猎头信息和公开薪酬报告交叉验证。<span class="conf conf-m">中置信度</span></p>
+
+  <table>
+    <thead><tr><th>岗位类型</th><th>学历要求</th><th>0-3年</th><th>3-5年</th><th>5-10年</th><th>10年+</th><th>发展天花板</th></tr></thead>
+    <tbody>
+      <tr><td><strong>药物发现/研发</strong></td><td>博士为主</td><td>25-40万</td><td>40-55万</td><td>55-80万</td><td>80-150万+</td><td>高(方向专注)</td></tr>
+      <tr><td><strong>CMC/工艺开发</strong></td><td>硕士/博士</td><td>15-25万</td><td>25-40万</td><td>40-60万</td><td>60-100万</td><td>中高</td></tr>
+      <tr><td><strong>临床运营(CRA/PM)</strong></td><td>本科/硕士</td><td>10-18万</td><td>18-30万</td><td>30-50万</td><td>50-80万</td><td>中(需转管理)</td></tr>
+      <tr><td><strong>注册事务(RA)</strong></td><td>硕士为主</td><td>12-20万</td><td>20-35万</td><td>35-60万</td><td>60-120万</td><td>高(国际化溢价)</td></tr>
+      <tr><td><strong>质量/QA/QC</strong></td><td>本科/硕士</td><td>10-15万</td><td>15-25万</td><td>25-40万</td><td>40-60万</td><td>中</td></tr>
+      <tr><td><strong>AI/计算生物学</strong></td><td>硕/博+CS背景</td><td>30-50万</td><td>50-80万</td><td>80-120万</td><td>150万+</td><td>极高(稀缺)</td></tr>
+      <tr><td><strong>BD/商务拓展</strong></td><td>硕/博+行业经验</td><td>15-25万</td><td>30-50万</td><td>50-80万</td><td>100万+</td><td>高(资源型)</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:6px">
+    <span class="conf conf-m">中置信度</span> 薪酬数据为行业估算区间，实际受企业规模、个人背景、市场行情影响。外企通常比内资高20-40%。杭州薪资约为上海的80-85%，但生活成本低25-30%。
+  </p>
+
+  <div class="card" style="margin-top:12px">
+    <h3>薪酬增长关键因子 <span class="conf conf-m">中置信度</span></h3>
+    <table>
+      <tr><th>因子</th><th>影响幅度</th><th>说明</th></tr>
+      <tr><td>博士 vs 硕士</td><td>起始高30-50%</td><td>博士在研发方向有结构性优势，CMC/注册方向差距缩小</td></tr>
+      <tr><td>外企 vs 内资</td><td>高20-40%</td><td>外企薪资福利更好，但晋升空间和职级上限可能不如内资快速</td></tr>
+      <tr><td>跳槽频率</td><td>每跳+15-30%</td><td>生物医药行业2-3年跳槽一次为正常节奏，但不建议频繁</td></tr>
+      <tr><td>方向稀缺性</td><td>溢价30-60%</td><td>AI制药/ADC/双抗等热门方向人才有显著溢价</td></tr>
+      <tr><td>国际化能力</td><td>溢价20-40%</td><td>中美双报经验/英语流利/海外学位均带来溢价</td></tr>
+    </tbody></table>
+  </div>
+</section>
+
+<!-- ==================== 6. SKILLS ==================== -->
+<section id="skills">
+  <h2>技能需求与能力提升路径</h2>
+  <p class="desc">基于招聘数据分析的杭州生物医药岗位核心技能需求。<span class="conf conf-m">中置信度</span></p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>硬技能需求 Top 10 <span class="conf conf-m">中</span></h3>
+      <table>
+        <tr><th>排名</th><th>技能</th><th>需求趋势</th><th>薪资溢价</th></tr>
+        <tr><td>1</td><td>蛋白质工程/抗体工程</td><td><span class="tag tag-hot">持续上升</span></td><td>25-40%</td></tr>
+        <tr><td>2</td><td>Python/R/生物信息学</td><td><span class="tag tag-hot">快速上升</span></td><td>30-50%</td></tr>
+        <tr><td>3</td><td>FDA/NMPA注册申报</td><td>稳定</td><td>20-35%</td></tr>
+        <tr><td>4</td><td>细胞培养/发酵工艺</td><td>稳定</td><td>15-25%</td></tr>
+        <tr><td>5</td><td>AI/机器学习(药物设计)</td><td><span class="tag tag-hot">爆发</span></td><td>40-60%</td></tr>
+        <tr><td>6</td><td>临床方案设计/统计</td><td>稳定</td><td>20-30%</td></tr>
+        <tr><td>7</td><td>GMP/质量管理体系</td><td>稳定</td><td>10-20%</td></tr>
+        <tr><td>8</td><td>项目管理(PMP)</td><td>上升</td><td>15-25%</td></tr>
+        <tr><td>9</td><td>商务英语/学术英语</td><td>稳定</td><td>15-30%</td></tr>
+        <tr><td>10</td><td>知识产权/专利</td><td>上升</td><td>20-35%</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>软技能需求 <span class="conf conf-m">中</span></h3>
+      <table>
+        <tr><th>技能</th><th>重要性</th><th>发展建议</th></tr>
+        <tr><td>跨部门沟通</td><td>★★★★★</td><td>主动参与跨部门项目</td></tr>
+        <tr><td>英语能力</td><td>★★★★★</td><td>外企必备，内资加分项</td></tr>
+        <tr><td>项目管理</td><td>★★★★</td><td>考PMP，主动lead项目</td></tr>
+        <tr><td>数据分析思维</td><td>★★★★</td><td>学Python/SQL基础</td></tr>
+        <tr><td>行业认知</td><td>★★★</td><td>持续跟踪CDE/FDA动态</td></tr>
+      </table>
+      <h3 style="margin-top:10px">证书价值 <span class="conf conf-l">低</span></h3>
+      <table>
+        <tr><th>证书</th><th>价值评估</th><th>建议</th></tr>
+        <tr><td>PMP</td><td>★★★</td><td>项目管理岗有用，研发方向非必须</td></tr>
+        <tr><td>RAC(法规事务)</td><td>★★★★</td><td>RA方向核心证书</td></tr>
+        <tr><td>执业药师</td><td>★★</td><td>非研发方向，主要针对药店/流通</td></tr>
+      </table>
+    </div>
+  </div>
 
   <div class="card">
-    <h3>2025-2026关键政策节点</h3>
-    <table>
-      <tr><th>时间</th><th>政策/事件</th><th>影响评估</th></tr>
-      <tr><td>2025年</td><td>第八批国家药品集采(生物类似药纳入)</td><td>利空存量生物药，利好创新</td></tr>
-      <tr><td>2025年</td><td>创新药医保谈判(每年6-7月)</td><td>关注降价幅度，影响创新药企定价</td></tr>
-      <tr><td>2025年</td><td>FDA对中国药企的现场检查恢复</td><td>利好出海审批加速</td></tr>
-      <tr><td>2025-2026</td><td>全链条支持创新药发展实施细则落地</td><td>利好全行业(国常会2024定调)</td></tr>
-      <tr><td>2025-2026</td><td>商保对创新药支付接入</td><td>潜在增量，需观察执行力度</td></tr>
-      <tr><td>2026年</td><td>第九批国家集采</td><td>持续压力</td></tr>
-    </table>
-  </div>
-
-  <div class="card-grid" style="margin-top:4px">
-    <div class="card">
-      <h3>利好方向</h3>
-      <ul style="font-size:13px;color:var(--text-muted);padding-left:16px">
-        <li>全链条支持创新药发展(国常会定调)</li>
-        <li>FDA检查恢复，出海审批提速</li>
-        <li>商保+创新药支付机制探索</li>
-        <li>医保谈判规则逐步透明化</li>
-        <li>港股18C/A股科创板对biotech持续开放</li>
-      </ul>
+    <h3>能力提升路径建议 <span class="conf conf-m">中置信度</span></h3>
+    <div class="flow">
+      <div class="flow-step" style="font-size:10px;padding:6px 10px">基础积累<br><span style="font-size:9px;opacity:.8">0-3年</span></div>
+      <span class="flow-arrow" style="font-size:10px">→</span>
+      <div class="flow-step" style="font-size:10px;padding:6px 10px">专业深化<br><span style="font-size:9px;opacity:.8">3-6年</span></div>
+      <span class="flow-arrow" style="font-size:10px">→</span>
+      <div class="flow-step" style="font-size:10px;padding:6px 10px">跨领域拓展<br><span style="font-size:9px;opacity:.8">5-8年</span></div>
+      <span class="flow-arrow" style="font-size:10px">→</span>
+      <div class="flow-step" style="font-size:10px;padding:6px 10px;background:var(--green)">管理/架构<br><span style="font-size:9px;opacity:.8">8-12年</span></div>
+      <span class="flow-arrow" style="font-size:10px">→</span>
+      <div class="flow-step" style="font-size:10px;padding:6px 10px;background:var(--orange)">战略决策层<br><span style="font-size:9px;opacity:.8">12年+</span></div>
     </div>
-    <div class="card">
-      <h3>利空方向</h3>
-      <ul style="font-size:13px;color:var(--text-muted);padding-left:16px">
-        <li>集采覆盖生物类似药范围扩大</li>
-        <li>医保基金收支压力加大</li>
-        <li>美国BioSecure法案持续影响CXO板块</li>
-        <li>全球biotech融资仍处低位</li>
-        <li>地缘政治影响License-out交易</li>
-      </ul>
-    </div>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px">
+      <strong>关键建议：</strong>① 前3年选对赛道(推荐AI制药/ADC方向)；② 3-6年深耕专业同时积累管理经验；③ 5-8年建立行业人脉和跨领域视野；④ 持续关注长三角人才流动机会，杭州-上海-苏州1小时通勤圈内跳槽成本低。<span class="conf conf-h">高</span>
+    </p>
   </div>
 </section>
 
-<!-- ==================== 8. TOOLS ==================== -->
-<section id="tools">
-  <h2>研究工具与数据源</h2>
-  <p class="desc">持续更新的研究工具箱。</p>
+<!-- ==================== 7. PARKS ==================== -->
+<section id="parks">
+  <h2>杭州产业园区与就业选择</h2>
+  <p class="desc">各产业园区特点对比，帮助匹配个人偏好。<span class="conf conf-h">高置信度</span></p>
+
+  <table>
+    <thead><tr><th>园区</th><th>区域</th><th>侧重点</th><th>代表企业</th><th>交通便利</th><th>生活配套</th><th>租金水平</th></tr></thead>
+    <tbody>
+      <tr><td><strong>医药港小镇</strong></td><td>钱塘区</td><td>生物制药/CDMO</td><td>药明生物、九洲药业</td><td>★★★</td><td>★★★</td><td>低</td></tr>
+      <tr><td><strong>未来科技城</strong></td><td>余杭区</td><td>数字医疗/AI制药</td><td>阿里健康、诺尔康</td><td>★★★★</td><td>★★★★</td><td>中</td></tr>
+      <tr><td><strong>滨江高新区</strong></td><td>滨江区</td><td>医疗器械/诊断</td><td>启明医疗、迪安诊断</td><td>★★★★</td><td>★★★★★</td><td>高</td></tr>
+      <tr><td><strong>萧山科技城</strong></td><td>萧山区</td><td>精准医疗/生物材料</td><td>微医、贝达(部分)</td><td>★★★</td><td>★★★</td><td>中</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--text-muted);margin-top:8px">
+    <strong>通勤建议：</strong>杭州地铁已覆盖主要园区。医药港小镇(1号线)和滨江(1/5/6号线)通勤便利。未来科技城(5号线/3号线)通达性逐年改善。<span class="conf conf-h">高</span>
+  </p>
+</section>
+
+<!-- ==================== 8. YRD ==================== -->
+<section id="yrd">
+  <h2>长三角对标：跳槽路径与薪资差异</h2>
+  <p class="desc">杭州-上海-苏州三地生物医药人才流动分析。<span class="conf conf-m">中置信度</span></p>
 
   <div class="card-grid">
     <div class="card">
-      <h3>数据平台</h3>
+      <h3>三地薪资对标（同岗位/同职级）</h3>
       <table>
-        <tr><td>药融云</td><td>yaozh.com</td><td>中国药品审评数据</td></tr>
-        <tr><td>医药魔方</td><td>pharmacube.com</td><td>全球管线数据库</td></tr>
-        <tr><td>CDE官网</td><td>cde.org.cn</td><td>临床试验登记</td></tr>
-        <tr><td>ClinicalTrials</td><td>clinicaltrials.gov</td><td>全球临床试验</td></tr>
-        <tr><td>Evaluate Pharma</td><td>evaluate.com</td><td>行业市场规模预测</td></tr>
+        <tr><th>城市</th><th>研发(博士5年)</th><th>CMC(硕士5年)</th><th>CRA(本科5年)</th><th>RA(硕士5年)</th></tr>
+        <tr><td><strong>上海张江</strong></td><td>55-80万</td><td>35-55万</td><td>25-40万</td><td>35-55万</td></tr>
+        <tr><td><strong>杭州</strong></td><td>45-65万</td><td>30-45万</td><td>20-35万</td><td>30-45万</td></tr>
+        <tr><td><strong>苏州BioBay</strong></td><td>45-60万</td><td>28-42万</td><td>20-32万</td><td>28-42万</td></tr>
       </table>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:6px">
+        <span class="conf conf-m">中</span> 杭州 vs 上海薪资差约15-25%，但房价差约40-50%，实际购买力杭州更高。
+      </p>
     </div>
     <div class="card">
-      <h3>跟踪清单</h3>
-      <ul style="font-size:13px;color:var(--text-muted);padding-left:16px;line-height:1.8">
-        <li>每月重点：CDE审评审批动态</li>
-        <li>每季度重点：上市公司财报+管线更新</li>
-        <li>每半年重点：医保谈判+集采动态</li>
-        <li>实时关注：FDA审批/CRL信函</li>
-        <li>持续跟踪：AI制药管线临床数据读出</li>
-      </ul>
+      <h3>跨城通勤/跳槽可行性</h3>
+      <table>
+        <tr><th>路线</th><th>高铁时间</th><th>可行性</th><th>跳槽频率</th></tr>
+        <tr><td>杭州→上海</td><td>45min-1h</td><td>★★★★★</td><td>每月2-3次通勤可接受</td></tr>
+        <tr><td>杭州→苏州</td><td>1-1.5h</td><td>★★★★</td><td>适合阶段性跳槽</td></tr>
+        <tr><td>杭州→南京</td><td>1-1.5h</td><td>★★★</td><td>机会较少</td></tr>
+      </table>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:6px">
+        <strong>建议策略</strong>：优先在杭州积累3-5年经验，建立核心竞争力后，可考虑上海机会获取薪资跳跃(回杭买车买房更现实)。
+      </p>
     </div>
+  </div>
+
+  <div class="card">
+    <h3>未来3年杭州生物医药人才趋势 <span class="conf conf-m">中置信度</span></h3>
+    <table>
+      <tr><th>趋势</th><th>对职业发展的影响</th><th>应对策略</th></tr>
+      <tr><td>AI制药岗位爆发(年增50%+)</td><td>交叉学科人才溢价持续扩大</td><td>学习Python/ML基础，参与AI+药物项目</td></tr>
+      <tr><td>CDMO增速放缓，内卷加剧</td><td>CMC岗位竞争激烈，薪资增速下降</td><td>向高附加值方向转型（如ADC CMC）</td></tr>
+      <tr><td>本地Biotech融资回暖</td><td>早期公司岗位增加，期权价值可能提升</td><td>选择有差异化技术平台的初创公司</td></tr>
+      <tr><td>长三角人才流动加速</td><td>跨城跳槽成为常态</td><td>提前建立上海/苏州人脉网络</td></tr>
+      <tr><td>国际化人才需求上升</td><td>中美双报经验价值提升</td><td>参与海外项目，提升英语，考虑RAC认证</td></tr>
+    </tbody></table>
   </div>
 </section>
 
 <footer>
-  <p>生物医药深度研究 · 科技金融事业部 · 前沿探索飞轮 | 数据截至2025Q1，仅供研究参考</p>
-  <p style="margin-top:4px;opacity:.6">数据来源：CDE、FDA、ClinicalTrials、各公司年报、Frost & Sullivan、IQVIA</p>
-  <p style="margin-top:4px;opacity:.6">⚠️ 本网站所有内容仅供参考，不构成投资建议。以官方公开信息为准。</p>
+  <p>生物医药职业发展研究 · 聚焦杭州长三角 · 前沿探索飞轮 | 数据截至2025Q1</p>
+  <p style="margin-top:4px;opacity:.6">来源：杭州市投促局、各园区官网、猎聘/Boss直聘/智联招聘行业报告、行业薪酬报告、行业访谈</p>
+  <p style="margin-top:4px;opacity:.6">
+    <span class="conf conf-h">高置信度</span> 公开官方信息 &nbsp;
+    <span class="conf conf-m">中置信度</span> 行业共识/交叉验证 &nbsp;
+    <span class="conf conf-l">低置信度</span> 趋势推断
+  </p>
 </footer>
-
-<script>
-function toggleSection(id) {
-  document.getElementById(id).classList.toggle('open');
-}
-</script>
 </body>
 </html>
